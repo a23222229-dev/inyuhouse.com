@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>盈寓 INYU｜讓好房有收益，讓居住有品質</title>
+<style>
+:root{--ink:#1d2a24;--muted:#56655c;--bg:#f7f6ee;--card:#fff;--pine:#13704a;--pine-d:#0b4a33;--sand:#e6f0df;--gold:#8cc63f;--line:#dde5d9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(247,246,238,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.2rem;color:var(--pine-d)}
+.logo img{height:46px;width:auto}
+.logo small{font-weight:500;letter-spacing:.2em;color:var(--pine);font-size:.8rem}
+nav{display:flex;gap:6px}
+nav button{background:none;border:0;font:inherit;padding:8px 14px;border-radius:6px;cursor:pointer;color:var(--ink)}
+nav button:hover{background:var(--sand)}
+nav button.on{background:var(--pine);color:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.page{display:none;padding:56px 0 72px}
+.page.on{display:block}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.3;color:var(--pine-d);margin-bottom:16px}
+h2{font-size:1.6rem;color:var(--pine-d);margin-bottom:12px;line-height:1.4}
+h3{font-size:1.1rem;margin-bottom:6px;color:var(--pine-d)}
+p.lead{font-size:1.12rem;color:var(--muted);max-width:34em}
+.sec{margin-top:72px}
+.btn{display:inline-block;background:var(--pine);color:#fff;padding:12px 26px;border-radius:6px;border:0;font:inherit;cursor:pointer;margin-top:22px}
+.btn:hover{background:var(--pine-d)}
+.btn.alt{background:transparent;color:var(--pine);border:1.5px solid var(--pine);margin-left:10px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.heroimg{width:min(460px,100%);max-height:540px;object-fit:contain;margin:0 auto}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pair img,.ph img{border-radius:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.box.g{background:var(--sand);border-color:transparent}
+.box img{border-radius:8px;margin:0 auto 14px;max-height:230px;width:auto}
+.box img.ei{width:100%;height:240px;max-height:none;object-fit:contain;object-position:center bottom}
+ul.ck{list-style:none}
+ul.ck li{padding:5px 0 5px 26px;position:relative;color:var(--muted)}
+ul.ck li::before{content:"";position:absolute;left:2px;top:14px;width:10px;height:10px;border-radius:50% 0;background:var(--gold)}
+.eq{background:var(--pine);color:#fff;border-radius:40px;padding:14px 26px;text-align:center;font-size:1.15rem;font-weight:700;margin-top:24px}
+.tbl{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.tbl table{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td,.tbl tr:last-child th{border-bottom:0}
+.tbl thead th{font-size:1.15rem}
+.tbl thead th:nth-child(2){background:#e6e6e2;color:#6d6d66}
+.tbl thead th:nth-child(3){background:var(--pine);color:#fff}
+.tbl tbody th{width:18%;color:var(--pine-d)}
+.tbl td:nth-child(2){background:#f1f1ee;color:#6d6d66;width:36%}
+.tbl td:nth-child(3){background:var(--sand)}
+.tbl td b{color:var(--pine-d)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.three>div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:8px;padding:20px}
+.three p,.box p,.four p{color:var(--muted);font-size:.95rem}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.four>div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px}
+.roots{margin-bottom:18px;border-radius:12px;width:100%}
+.cta{background:var(--pine-d);color:#fff;border-radius:14px;padding:38px;text-align:center;margin-top:72px}
+.cta h2{color:#fff}.cta p{color:#c3dccb}.cta .btn{background:var(--gold);color:var(--pine-d);font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.steps button{all:unset;cursor:pointer;background:var(--card);border:1px solid var(--line);border-bottom:4px solid var(--gold);border-radius:8px;padding:16px;display:block}
+.steps button:hover{background:var(--sand)}
+.steps b{display:block;color:var(--gold);font-size:1.5rem;line-height:1.2;filter:brightness(.8)}
+.steps span{display:block;font-weight:700;color:var(--pine-d)}
+.steps small{color:var(--muted)}
+.blk{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-top:72px;scroll-margin-top:84px}
+.blk.wide{grid-template-columns:1fr}
+.blk.rev>:first-child{order:2}
+.blk .sub{color:var(--muted);margin-bottom:10px}
+.num{display:inline-block;background:var(--pine);color:#fff;border-radius:6px;padding:0 10px;font-weight:700;margin-bottom:8px}
+.blk img{border-radius:12px;width:100%}
+.lyr{border-left:4px solid var(--gold);padding:4px 0 4px 14px;margin-bottom:12px}
+.lyr p{color:var(--muted);font-size:.95rem}
+.plan{border-radius:14px;padding:30px}
+.plan.a{background:var(--pine-d);color:#fff}.plan.a h3,.plan.a h2{color:#fff}
+.plan.b{background:#fff;border:3px solid var(--pine-d)}
+.plan h4{margin-top:14px;color:var(--gold);filter:brightness(.85)}
+.plan.a p{color:#dcebe0}.plan p{color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.qr{width:min(300px,100%);margin:0 auto 10px}
+.info p{padding:6px 0}.info a{color:var(--pine);font-weight:600}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:4px}
+input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;width:100%}
+#msg{margin-top:10px;color:var(--pine);font-weight:600;min-height:1.6em}
+footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20px;font-size:.9rem}
+@media(max-width:800px){
+ .hero,.two,.three,.four,.steps,.blk,.cgrid,.pair{grid-template-columns:1fr}
+ .steps,.four{grid-template-columns:1fr 1fr}
+ .blk.rev>:first-child{order:0}
+ header .wrap{height:auto;flex-direction:column;padding:10px 20px;gap:6px}
+ nav button{padding:6px 10px}
+ .btn.alt{margin-left:0}
+ .tbl th,.tbl td{padding:10px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#home" data-go="home"><img src="./img/logo.png" alt="盈寓標誌">盈寓 <small>INYU</small></a>
+ <nav id="nav" aria-label="主選單">
+  <button data-p="home" class="on">首頁</button><button data-p="about">關於我們</button><button data-p="service">服務項目</button><button data-p="contact">聯絡我們</button>
+ </nav>
+</div></header>
+
+<main>
+<!-- 首頁 -->
+<section class="page on" id="home"><div class="wrap">
+ <div class="hero">
+  <div>
+   <h1>讓好房有收益，<br>讓居住有品質。</h1>
+   <p class="lead">盈寓以專業的資產管理與空間升級，把閒置或老舊的房子，變成穩定、長效的收益；也讓每一位房客，住得安心、住得有品味。</p>
+   <button class="btn" data-go="contact">預約免費資產健檢</button><button class="btn alt" data-go="service">了解合作方案</button>
+  </div>
+  <img class="heroimg" src="./img/首頁圖.webp" alt="盈寓：綠意與資產共同成長的居住空間">
+ </div>
+
+ <div class="sec">
+  <h2>創造雙贏的居住生態圈</h2>
+  <div class="two" style="margin-top:18px">
+   <div class="box"><img class="ei" src="./img/首頁左圖.webp" alt="資產增值示意圖">
+    <h3>讓好房有收益</h3>
+    <ul class="ck"><li>活化閒置資產</li><li>創造穩健被動收入</li><li>實現資產增值</li></ul></div>
+   <div class="box g"><img class="ei" src="./img/首頁右圖.webp" alt="優質居住空間示意圖">
+    <h3>讓居住有品質</h3>
+    <ul class="ck"><li>導入現代美學</li><li>嚴選環保建材</li><li>打造安心生活</li></ul></div>
+  </div>
+  <div class="eq">高品質居住空間 ＝ 優質穩定租客 ＝ 更長效的穩健收益</div>
+ </div>
+
+ <div class="sec">
+  <h2>告別傳統租屋痛點，迎接資產活化</h2>
+  <div class="tbl" style="margin-top:18px"><table>
+   <thead><tr><th></th><th>傳統自租</th><th>盈寓代管</th></tr></thead>
+   <tbody>
+    <tr><th>時間投入</th><td>繁瑣耗時：帶看、修繕、催繳</td><td><b>零瑣事全包：</b>房東完全免插手</td></tr>
+    <tr><th>招租空窗期</th><td>風險極高：需自行承擔無收入月份</td><td><b>高效招租：</b>大幅縮短空置，或提供包租零空窗保證</td></tr>
+    <tr><th>租客品質</th><td>碰運氣：缺乏徵信與背景審核機制</td><td><b>嚴格把關：</b>系統化篩選優質高素質租客</td></tr>
+    <tr><th>房屋折舊</th><td>逐年老化：缺乏系統性維護</td><td><b>資產升級：</b>定期維護與專業空間優化</td></tr>
+   </tbody></table></div>
+ </div>
+
+ <div class="sec">
+  <h2 style="text-align:center">支撐資產增值的三大核心優勢</h2>
+  <img class="roots" src="./img/首頁中圖.webp" alt="三大核心優勢：專業設計團隊、數據化定價策略、一站式無憂代管" style="margin-top:14px">
+  <div class="three">
+   <div><h3>專業設計團隊</h3><p>精準預算控制，以高投資報酬率為導向的空間升級。</p></div>
+   <div><h3>數據化定價策略</h3><p>透過大數據分析區域行情，精準設定最高效的租金甜蜜點。</p></div>
+   <div><h3>一站式無憂代管</h3><p>從招租、簽約、修繕到退租，提供全天候的專屬管家服務。</p></div>
+  </div>
+ </div>
+
+ <div class="cta"><h2>啟動您的資產增值引擎</h2><p>立即預約免費資產健檢，探索您的房屋潛力。</p><button class="btn" data-go="contact">預約健檢</button></div>
+</div></section>
+
+<!-- 關於我們 -->
+<section class="page" id="about"><div class="wrap">
+ <div class="hero">
+  <div>
+   <h1>盈寓 INYU<br>品牌介紹</h1>
+   <p class="lead">盈寓是一間專注住宅包租與代管的資產管理品牌。我們相信，房子照顧得好，收益與居住品質都會一起提升。</p>
+  </div>
+  <img src="./img/關於我們logo圖.png" alt="盈寓 INYU 讓好房有收益，讓居住有品質" style="width:min(380px,100%);margin:0 auto">
+ </div>
+
+ <div class="sec">
+  <h2>「盈寓」兩個字的意思</h2>
+  <div class="two" style="margin-top:16px">
+   <div class="box"><h3>盈：盈餘、收益</h3><p>房子是資產，就該穩定產生收益。我們以數據評估、專業定價與細緻管理，讓房東的收入看得見、可預期。</p></div>
+   <div class="box g"><h3>寓：寓所、安居</h3><p>房子也是生活的地方。我們重視屋況、空間美學與房客服務，讓住的人願意長久住下去。</p></div>
+  </div>
+  <p class="lead" style="margin-top:16px">標誌以屋頂與窗戶象徵「家」，下方兩片綠葉代表細心培育與永續經營。</p>
+ </div>
+
+ <div class="sec">
+  <h2>盈寓生態圈：生生不息的有機資產</h2>
+  <div class="blk" style="margin-top:20px">
+   <img src="./img/關於我們1圖.webp" alt="盈寓生態圈循環圖">
+   <div>
+    <div class="lyr"><h3>提升資產價值</h3><p>透過空間升級與專業維護。</p></div>
+    <div class="lyr"><h3>吸引優質租客</h3><p>願意支付溢價並愛惜房屋。</p></div>
+    <div class="lyr"><h3>降低維護成本</h3><p>優質租客減少破壞，專業管理及早發現問題。</p></div>
+    <div class="lyr"><h3>創造被動財富</h3><p>房東獲得穩定高收益，進一步投資資產。</p></div>
+   </div>
+  </div>
+ </div>
+
+ <div class="sec">
+  <h2>盈寓標準：定義新世代的居住美學</h2>
+  <div class="three" style="margin-top:18px">
+   <div class="ph" style="padding:0;border:0;background:none"><img src="./img/關於我們2圖.webp" alt="綠色環保建材"><h3 style="margin-top:10px">綠色環保建材</h3><p>採用低甲醛、無毒材質，保障健康並響應永續。</p></div>
+   <div class="ph" style="padding:0;border:0;background:none"><img src="./img/關於我們3圖.webp" alt="現代簡約美學"><h3 style="margin-top:10px">現代簡約美學</h3><p>去繁就簡的設計語彙，打造不過時的雋永空間。</p></div>
+   <div class="ph" style="padding:0;border:0;background:none"><img src="./img/關於我們4圖.webp" alt="智慧居家生活"><h3 style="margin-top:10px">智慧居家生活</h3><p>整合物聯網設備，提供現代化便捷體驗。</p></div>
+  </div>
+ </div>
+
+ <div class="cta"><h2>想知道您的房子有多少潛力？</h2><p>歡迎預約免費資產健檢，由專人為您說明。</p><button class="btn" data-go="contact">預約健檢</button></div>
+</div></section>
+
+<!-- 服務項目 -->
+<section class="page" id="service"><div class="wrap">
+ <h1>資產增值引擎：<br>四大標準化服務流程</h1>
+ <p class="lead">從評估、升級、招租到收益，每個環節都有標準，讓資產穩定成長。</p>
+ <div class="steps">
+  <button data-to="s1"><b>01</b><span>資產評估</span><small>數據健檢，發掘潛力</small></button>
+  <button data-to="s2"><b>02</b><span>空間升級</span><small>美學導入，價值翻倍</small></button>
+  <button data-to="s3"><b>03</b><span>高效包租</span><small>嚴選租客，快速去化</small></button>
+  <button data-to="s4"><b>04</b><span>穩健收益</span><small>被動收入，安心無憂</small></button>
+ </div>
+
+ <div class="blk wide" id="s1">
+  <div>
+   <span class="num">01</span><h2>資產評估：數據驅動的精準健檢</h2>
+   <p class="sub">我們不靠直覺，我們依靠精確的數據模型來評估您的資產潛力。</p>
+   <img src="./img/服務項目1.webp" alt="資產評估四大面向：地段發展性、屋況體質、客群定位、潛在租金投報" style="margin-top:14px">
+  </div>
+ </div>
+
+ <div class="blk rev" id="s2">
+  <div>
+   <span class="num">02</span><h2>空間升級：以投報率為導向的輕裝修</h2>
+   <p class="sub">每一分預算都花在刀口上，專注於能顯著提升租金與出租率的核心項目。</p>
+   <div class="lyr"><h3>智能門鎖與安防</h3><p>提升居住安全感，吸引高端租客。</p></div>
+   <div class="lyr"><h3>高效能採光設計</h3><p>改善空間氛圍，讓老屋瞬間年輕化。</p></div>
+   <div class="lyr"><h3>耐磨降噪木地板</h3><p>提升視覺質感與居住舒適度，延長使用壽命。</p></div>
+   <div class="lyr"><h3>模組化收納空間</h3><p>解決都市居住痛點，極大化坪效。</p></div>
+  </div>
+  <img src="./img/服務項目2.webp" alt="老舊空間升級前後對照">
+ </div>
+
+ <div class="blk" id="s3">
+  <div>
+   <span class="num">03</span><h2>高效包租：漏斗式嚴格把關租客品質</h2>
+   <div class="lyr"><h3>第一層：廣泛且精準的行銷</h3><p>透過多通路曝光，最大化潛在租客基數。</p></div>
+   <div class="lyr"><h3>第二層：信用與背景審核</h3><p>檢視職業穩定度、收入證明與過往租屋紀錄。</p></div>
+   <div class="lyr"><h3>第三層：生活習慣深度面談</h3><p>確保租客能愛護空間，維持社區和諧。</p></div>
+   <p style="margin-top:10px;font-weight:700;color:var(--pine-d)">→ 簽約入住（零風險的優質租客）</p>
+  </div>
+  <img src="./img/服務項目3.webp" alt="三層漏斗式租客篩選" style="max-width:420px;margin:0 auto">
+ </div>
+
+ <div class="blk wide" id="s4">
+  <div>
+   <span class="num">04</span><h2>穩健收益：實現真正的被動財富</h2>
+   <p class="sub">享受生活，繁瑣的物業管理交給盈寓。</p>
+   <div class="three" style="margin:14px 0 18px">
+    <div><h3>零空窗期焦慮</h3><p>確保資產持續產生現金流。</p></div>
+    <div><h3>每月準時入帳</h3><p>財務規劃更具可預測性。</p></div>
+    <div><h3>資產持續保值</h3><p>定期屋況巡檢，防止資產隱性折舊。</p></div>
+   </div>
+   <img src="./img/服務項目4.webp" alt="穩健收益：舒適居家空間搭配逐步成長的收益圖">
+  </div>
+ </div>
+
+ <div class="sec">
+  <h2 style="text-align:center">靈活合作方案，為您的資產量身定制</h2>
+  <div class="two" style="margin-top:20px">
+   <div class="plan a"><h2>方案 A：全效包租方案</h2><p>Turnkey Bao-zu</p>
+    <h4>適用對象</h4><p>追求絕對零風險、不想處理任何瑣事的房東。</p>
+    <h4>特色</h4><p>盈寓承擔所有空窗期風險，保證每月固定收益。盈寓負責全額／部分裝修升級。</p></div>
+   <div class="plan b"><h2>方案 B：輕裝代管方案</h2><p>Premium Management</p>
+    <h4>適用對象</h4><p>希望保留較高租金利潤，且願承擔微小市場波動的房東。</p>
+    <h4>特色</h4><p>房東享有實際租金收益扣除代管費。盈寓提供專業升級建議與全方位物業管理。</p></div>
+  </div>
+ </div>
+ <div class="cta"><h2>啟動您的資產增值引擎</h2><p>立即預約免費資產健檢，探索您的房屋潛力。</p><button class="btn" data-go="contact">預約健檢</button></div>
+</div></section>
+
+<!-- 聯絡我們 -->
+<section class="page" id="contact"><div class="wrap">
+ <h1>啟動您的資產增值引擎</h1>
+ <p class="lead">立即預約免費資產健檢，探索您的房屋潛力。</p>
+ <div class="cgrid" style="margin-top:32px">
+  <div>
+   <div class="box info">
+    <h2>聯絡資訊</h2>
+    <p>電話：<a href="tel:0978939153">0978-939153</a></p>
+    <p>網站：<a href="https://www.inyu.com.tw" target="_blank" rel="noopener">www.inyu.com.tw</a></p>
+    <p>Email：<a href="mailto:contact@inyu.com.tw">contact@inyu.com.tw</a></p>
+   </div>
+   <div class="box g" style="margin-top:20px;text-align:center">
+    <img class="qr" src="./img/qrcode.webp" alt="官方 LINE QR Code" style="max-height:none;border-radius:12px">
+    <b>掃描加入官方 LINE 專人諮詢</b>
+   </div>
+  </div>
+  <div class="box">
+   <h2>線上預約健檢</h2>
+   <form id="f">
+    <label>姓名<input name="n" required></label>
+    <label>電話<input name="t" type="tel" required></label>
+    <label>有興趣的方案<select name="s"><option>A：全效包租方案</option><option>B：輕裝代管方案</option><option>不確定，想先做資產健檢</option></select></label>
+    <label>房屋地址或區域<input name="a"></label>
+    <label>其他說明<textarea name="m" rows="3"></textarea></label>
+    <button class="btn" type="submit" style="margin-top:0">送出預約</button>
+    <div id="msg" role="status"></div>
+   </form>
+  </div>
+ </div>
+</div></section>
+</main>
+
+<footer>© 2026 盈寓 INYU　讓好房有收益，讓居住有品質。｜0978-939153｜contact@inyu.com.tw</footer>
+
+<script>
+const btns=document.querySelectorAll('#nav button'),pages=document.querySelectorAll('.page');
+function show(id){pages.forEach(p=>p.classList.toggle('on',p.id===id));btns.forEach(b=>b.classList.toggle('on',b.dataset.p===id));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
+btns.forEach(b=>b.onclick=()=>show(b.dataset.p));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=e=>{e.preventDefault();show(b.dataset.go)});
+document.querySelectorAll('[data-to]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.to).scrollIntoView({behavior:'smooth'}));
+const h=location.hash.slice(1);if(h&&document.getElementById(h)&&document.getElementById(h).classList.contains('page'))show(h);
+document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('msg').textContent='已收到您的預約，我們會盡快與您聯繫。';e.target.reset()};
+</script>
+</body>
+</html>
