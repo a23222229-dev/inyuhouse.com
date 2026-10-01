@@ -90,6 +90,11 @@ form{display:grid;gap:14px}
 label{font-weight:600;font-size:.95rem;display:grid;gap:4px}
 input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;width:100%}
 #msg{margin-top:10px;color:var(--pine);font-weight:600;min-height:1.6em}
+.linebtn{display:inline-block;background:#06c755;color:#fff;font-weight:700;font-size:1.15rem;padding:14px 36px;border-radius:40px;margin:14px 0 18px}
+.linebtn:hover{background:#05a847}
+.lsteps{counter-reset:s;list-style:none;text-align:left;max-width:320px;margin:0 auto 20px}
+.lsteps li{counter-increment:s;position:relative;padding:6px 0 6px 38px;color:var(--ink)}
+.lsteps li::before{content:counter(s);position:absolute;left:0;top:7px;width:26px;height:26px;border-radius:50%;background:var(--pine);color:#fff;font-size:.85rem;display:grid;place-items:center}
 footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20px;font-size:.9rem}
 @media(max-width:800px){
  .hero,.two,.three,.four,.steps,.blk,.cgrid,.pair{grid-template-columns:1fr}
@@ -281,26 +286,33 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
   <div>
    <div class="box info">
     <h2>聯絡資訊</h2>
-    <p>電話：<a href="tel:0978939153">0978-939153</a></p>
     <p>LINE@：<a href="https://lin.ee/72at0Vb" target="_blank" rel="noopener">https://lin.ee/72at0Vb</a></p>
-    <p>Email：<a href="mailto:max121419@gmail.com">max121419@gmail.com</a></p>
+    <p>電話：<a href="tel:0978939153">0978-939153</a></p>
+    <p>Email：<a href="mailto:contact@inyu.com.tw">contact@inyu.com.tw</a></p>
    </div>
-   <div class="box g" style="margin-top:20px;text-align:center">
-    <a href="https://lin.ee/72at0Vb" target="_blank" rel="noopener"><img class="qr" src="./img/qrcode.webp" alt="官方 LINE QR Code" style="max-height:none;border-radius:12px"></a>
-    <b>掃描或點擊加入官方 LINE 專人諮詢</b>
+   <div class="box g" style="margin-top:20px">
+    <h3>預約時，請先告訴我們</h3>
+    <ul class="ck">
+     <li>房屋所在區域或地址</li>
+     <li>房屋類型與坪數</li>
+     <li>有興趣的方案（A 全效包租／B 輕裝代管，或不確定）</li>
+     <li>方便聯絡的時間</li>
+    </ul>
    </div>
   </div>
-  <div class="box">
-   <h2>線上預約健檢</h2>
-   <form id="f">
-    <label>姓名<input name="n" required></label>
-    <label>電話<input name="t" type="tel" required></label>
-    <label>有興趣的方案<select name="s"><option>A：全效包租方案</option><option>B：輕裝代管方案</option><option>不確定，想先做資產健檢</option></select></label>
-    <label>房屋地址或區域<input name="a"></label>
-    <label>其他說明<textarea name="m" rows="3"></textarea></label>
-    <button class="btn" type="submit" style="margin-top:0">送出預約</button>
-    <div id="msg" role="status"></div>
-   </form>
+  <div class="box" style="text-align:center">
+   <h2>用 LINE 預約免費資產健檢</h2>
+   <p style="color:var(--muted)">加入官方 LINE，傳訊息給專人，最快、最方便。</p>
+   <a class="linebtn" href="https://lin.ee/72at0Vb" target="_blank" rel="noopener">加入官方 LINE 預約</a>
+   <ol class="lsteps">
+    <li>加入官方 LINE 好友</li>
+    <li>傳送房屋區域與基本資料</li>
+    <li>專人與您聯繫，安排資產健檢</li>
+   </ol>
+   <div class="box g" style="padding:18px">
+    <img class="qr" src="./img/qrcode.webp" alt="官方 LINE QR Code" style="max-height:none;border-radius:12px;width:min(220px,100%)">
+    <b>使用電腦瀏覽？請用手機掃描 QR Code</b>
+   </div>
   </div>
  </div>
 </div></section>
@@ -315,7 +327,6 @@ btns.forEach(b=>b.onclick=()=>show(b.dataset.p));
 document.querySelectorAll('[data-go]').forEach(b=>b.onclick=e=>{e.preventDefault();show(b.dataset.go)});
 document.querySelectorAll('[data-to]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.to).scrollIntoView({behavior:'smooth'}));
 const h=location.hash.slice(1);if(h&&document.getElementById(h)&&document.getElementById(h).classList.contains('page'))show(h);
-document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('msg').textContent='已收到您的預約，我們會盡快與您聯繫。';e.target.reset()};
 </script>
 </body>
 </html>
