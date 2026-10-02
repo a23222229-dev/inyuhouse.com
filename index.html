@@ -123,6 +123,75 @@ button.linebtn{border:0;font:inherit;font-weight:700;font-size:1.15rem;cursor:po
 .p1 td:first-child{background:#e8501f}.p2 td:first-child{background:#0b4a33}.p3 td:first-child{background:#4a9a62}.p4 td:first-child{background:#8fcf9d;color:#0b4a33}
 .formula{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:16px;text-align:center;font-weight:700;color:var(--pine-d);font-size:1.05rem}
 footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20px;font-size:.9rem}
+/* 解決方案頁：加大文字 */
+#solution h1{font-size:clamp(2.3rem,5.6vw,3.5rem)}
+#solution h2{font-size:clamp(1.65rem,4.2vw,2.2rem)}
+#solution h3{font-size:1.4rem;margin-bottom:8px}
+#solution p.lead{font-size:1.4rem;max-width:36em}
+#solution .cards6{gap:20px}
+#solution .cards6>div{padding:24px}
+#solution .cards6 p,#solution .dsteps p,#solution .worry p{font-size:1.15rem;line-height:1.85}
+#solution .worry .box{padding:26px}
+#solution .worry li{font-size:1.2rem;padding:9px 0}
+#solution .chips{gap:10px}
+#solution .chips li{font-size:1.15rem;padding:8px 18px}
+#solution .formula{font-size:1.35rem;padding:20px 24px}
+#solution .callout{font-size:1.25rem;padding:20px 26px;line-height:1.8}
+#solution .trust h2{font-size:clamp(1.8rem,4.6vw,2.4rem)}
+#solution .pr td{font-size:1.15rem;padding:14px 18px}
+#solution .pr td:first-child{width:120px}
+#solution .dsteps{grid-template-columns:repeat(3,1fr);gap:16px}
+#solution .dsteps>div{padding:20px}
+#solution .dsteps b{width:54px;height:54px;font-size:1.7rem;margin-bottom:10px}
+#solution .cta h2{font-size:clamp(1.65rem,4.2vw,2.2rem)}
+#solution .cta p{font-size:1.25rem}
+#solution .cta .btn{font-size:1.15rem;padding:14px 34px}
+/* 其他頁面：加大文字 */
+:is(#home,#about,#service,#contact){font-size:1.15rem}
+:is(#home,#about,#service,#contact) h1{font-size:clamp(2.3rem,5.6vw,3.5rem)}
+:is(#home,#about,#service,#contact) h2{font-size:clamp(1.65rem,4.2vw,2.2rem)}
+:is(#home,#about,#service,#contact) h3{font-size:1.4rem;margin-bottom:8px}
+:is(#home,#about,#service,#contact) p.lead{font-size:1.4rem;max-width:36em}
+:is(#home,#about,#service,#contact) :is(.box,.three,.four,.lyr,.plan) p{font-size:1.15rem;line-height:1.85}
+:is(#home,#about,#service,#contact) .sub{font-size:1.2rem}
+:is(#home,#about,#service,#contact) ul.ck li{font-size:1.15rem}
+:is(#home,#about,#service,#contact) .eq{font-size:1.35rem;padding:18px 28px}
+:is(#home,#about,#service,#contact) .tbl th,:is(#home,#about,#service,#contact) .tbl td{font-size:1.15rem;padding:16px 18px}
+:is(#home,#about,#service,#contact) .tbl thead th{font-size:1.3rem}
+:is(#home,#about,#service,#contact) .btn{font-size:1.15rem;padding:14px 34px}
+:is(#home,#about,#service,#contact) .cta p{font-size:1.25rem}
+:is(#home,#about,#service,#contact) .three>div{padding:24px}
+:is(#home,#about,#service,#contact) .four>div{padding:22px}
+:is(#home,#about,#service,#contact) .box{padding:28px}
+:is(#home,#about,#service,#contact) .plan{padding:34px}
+:is(#home,#about,#service,#contact) .plan h4{font-size:1.2rem}
+:is(#home,#about,#service,#contact) .num{font-size:1.15rem}
+:is(#home,#about,#service,#contact) .steps span{font-size:1.3rem}
+:is(#home,#about,#service,#contact) .steps small{font-size:1.05rem}
+:is(#home,#about,#service,#contact) .steps b{font-size:1.8rem}
+:is(#home,#about,#service,#contact) .info p{font-size:1.25rem}
+:is(#home,#about,#service,#contact) .lsteps{max-width:420px}
+:is(#home,#about,#service,#contact) .lsteps li{font-size:1.2rem;padding-left:44px}
+:is(#home,#about,#service,#contact) .lsteps li::before{width:30px;height:30px;font-size:1rem}
+:is(#home,#about,#service,#contact) .phonebig{font-size:2.6rem}
+:is(#home,#about,#service,#contact) .linebtn{font-size:1.25rem}
+:is(#home,#about,#service,#contact) .logofull{max-width:100%}
+.logo{font-size:1.4rem}
+.logo small{font-size:.9rem}
+nav button{font-size:1.1rem;padding:8px 16px}
+footer{font-size:1rem}
+@media(max-width:800px){
+ :is(#home,#about,#service,#contact) h3{font-size:1.25rem}
+ :is(#home,#about,#service,#contact) p.lead{font-size:1.2rem}
+ :is(#home,#about,#service,#contact) .tbl th,:is(#home,#about,#service,#contact) .tbl td{font-size:.95rem;padding:10px}
+ :is(#home,#about,#service,#contact) .tbl thead th{font-size:1.05rem}
+ :is(#home,#about,#service,#contact) .eq{font-size:1.15rem}
+ :is(#home,#about,#service,#contact) .box,:is(#home,#about,#service,#contact) .plan{padding:22px}
+ :is(#home,#about,#service,#contact) .phonebig{font-size:2.1rem}
+ nav{flex-wrap:wrap;justify-content:center}
+ nav button{font-size:1rem;padding:6px 12px}
+}
+@media(max-width:800px){#solution .cards6,#solution .worry{grid-template-columns:1fr}#solution .dsteps{grid-template-columns:1fr 1fr}#solution .pr td:last-child{width:auto}#solution .pr td{padding:10px}}
 @media(max-width:800px){
  .cards6,.worry{grid-template-columns:1fr}
  .dsteps{grid-template-columns:1fr 1fr}
@@ -133,6 +202,14 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
  nav button{padding:6px 10px}
  .btn.alt{margin-left:0}
  .tbl th,.tbl td{padding:10px;font-size:.9rem}
+}
+/* 手機版：大標題置中 */
+@media(max-width:800px){
+ :is(#home,#about,#solution,#service,#contact) :is(h1,h2,p.lead,.sub){text-align:center}
+ :is(#home,#about,#solution,#service,#contact) p.lead{margin-left:auto;margin-right:auto}
+ :is(#home,#about,#solution,#service,#contact) .num{display:block;width:fit-content;margin:0 auto 8px}
+ :is(#home,#about,#solution,#service,#contact) .hero>div:first-child{text-align:center}
+ :is(#home,#about,#solution,#service,#contact) .btn.alt{margin-left:6px}
 }
 </style>
 </head>
@@ -247,47 +324,25 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
  <div class="sec" id="sol-problem">
   <h2>租賃現場的真正危機，是「問題沒有被定義」</h2>
   <img class="sol-img" src="./img/解決方案2.webp" alt="房東與房客各自的擔憂，經由盈寓系統轉化為可處理的事件">
-  <div class="worry">
-   <div class="box a"><h3>房東擔憂資產折損與金流中斷</h3>
-    <ul><li>為什麼房子一直空置？</li><li>修繕到底誰付錢？</li><li>房客不繳租怎麼辦？</li></ul></div>
-   <div class="box b"><h3>房客擔憂居住品質與權益受損</h3>
-    <ul><li>冷氣壞了沒人修！</li><li>押金會不會被亂扣？</li><li>房東臨時漲價？</li></ul></div>
-  </div>
-  <div class="callout">問題不等於失敗。模糊不清、缺乏證據與沒有期限的抱怨，才是爭議的根源。盈寓將情緒轉化為可處理的系統事件。</div>
+
+  
  </div>
 
  <div class="sec" id="sol-map">
   <h2>盈寓 6 大事務地圖：全方位覆蓋租賃生命週期</h2>
   <img class="sol-img" src="./img/解決方案3.webp" alt="盈寓系統六大事務地圖">
-  <div class="cards6">
-   <div><h3>接案業務</h3><p>承諾管理與範圍界定。</p></div>
-   <div><h3>租賃事務</h3><p>市場判讀、租約設計與流程控管。</p></div>
-   <div><h3>房管庶務</h3><p>報修查驗、派工、驗收與憑證閉環。</p></div>
-   <div><h3>金流帳務</h3><p>租押金流、對帳授權與異常追蹤。</p></div>
-   <div><h3>執行法務</h3><p>責任界線、文件完整性與證據意識。</p></div>
-   <div><h3>所得稅務</h3><p>費用分類、單據留存與稅務交付。</p></div>
-  </div>
   <div class="callout">一個完整的閉環系統：任何突發狀況，都能在系統中找到對應的處理機制與主責劃分。</div>
  </div>
 
  <div class="sec" id="sol-datacr">
   <h2>拒絕憑感覺做事：盈寓的 D-A-T-A-C-R 標準流程</h2>
   <img class="sol-img" src="./img/解決方案4.webp" alt="D-A-T-A-C-R 六步驟標準流程：定義、評估、追溯、行動、確認、復盤">
-  <div class="dsteps">
-   <div><b>D</b><h3>定義</h3><p>一句話釐清人、事、時、地、物與影響。</p></div>
-   <div><b>A</b><h3>評估</h3><p>判斷安全、法律、金流與客訴風險級別。</p></div>
-   <div><b>T</b><h3>追溯</h3><p>尋找契約、照片與點交紀錄作為客觀證據。</p></div>
-   <div><b>A</b><h3>行動</h3><p>執行報價、派工、催繳等具體動作。</p></div>
-   <div><b>C</b><h3>確認</h3><p>與房東／房客確認方案、費用與期限。</p></div>
-   <div><b>R</b><h3>復盤</h3><p>結案並更新 SOP，避免問題重複發生。</p></div>
-  </div>
  </div>
 
  <div class="sec" id="sol-landlord">
   <h2>房東視角：從「最高刊登價」到「最高有效收益」</h2>
   <img class="sol-img" src="./img/解決方案5.webp" alt="房東視角：營運淨收益管理、精準定價與招租漏斗、資產保護">
-  <div class="formula">有效收益 ＝ 名目租金 － 空置損失 － 折讓／日常營運支出</div>
-  <div class="cards6" style="grid-template-columns:repeat(3,1fr)">
+  <div class="cards6">
    <div><h3>營運淨收益管理</h3><p>不只看刊登價，而是看扣除空置與營運支出後，真正落袋的有效收益。</p></div>
    <div><h3>精準定價與招租漏斗</h3><p>曝光、詢問、帶看、成交。透過漏斗數據抓出卡關點，避免招租期過長造成的隱形空置成本。</p></div>
    <div><h3>資產保護</h3><p>從設備履歷到退租點交，以「可追溯的照片與文件」取代「口頭印象」，全面保全房屋資產價值。</p></div>
@@ -297,15 +352,8 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
  <div class="sec" id="sol-tenant">
   <h2>房客視角：把「叫師傅來」變成標準化服務體驗</h2>
   <img class="sol-img" src="./img/解決方案6.webp" alt="房客視角：透明的修繕權責與處理承諾分級表">
-  <h3 style="margin-top:20px">透明的修繕權責</h3>
-  <ul class="chips"><li>報修</li><li class="g">判斷（耗材／人為／老化）</li><li>估價</li><li>授權</li><li class="g">施工</li><li>驗收</li></ul>
-  <h3 style="margin-top:18px">盈寓處理承諾分級表</h3>
-  <table class="pr"><tbody>
-   <tr class="p1"><td>P1 緊急</td><td>漏水擴大、人身安全受威脅</td><td>承諾：立即通報止損</td></tr>
-   <tr class="p2"><td>P2 高</td><td>明顯影響居住（如盛夏冷氣不冷）</td><td>承諾：當日安排處理</td></tr>
-   <tr class="p3"><td>P3 中</td><td>局部功能異常</td><td>承諾：排程處理</td></tr>
-   <tr class="p4"><td>P4 低</td><td>美觀改善、非必要升級</td><td>承諾：納入週期維護</td></tr>
-  </tbody></table>
+
+
  </div>
 
  <div class="sec trust" id="sol-trust"><h2>第三方租押金信託</h2></div>
@@ -313,11 +361,8 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
  <div class="sec" id="sol-ledger" style="margin-top:56px">
   <h2>盈寓台帳系統：從「四處救火」到「安居樂業」</h2>
   <img class="sol-img" src="./img/解決方案7.webp" alt="盈寓台帳系統：數據留痕、權責清晰、居住升級">
-  <ul class="chips"><li>數據留痕</li><li>權責清晰</li><li>居住升級</li></ul>
-  <div class="worry">
-   <div class="box a"><h3>對房東</h3><p>每一分錢都有憑證，每一次修繕都有履歷。您的房屋是優質的頂級租賃產品。</p></div>
-   <div class="box b"><h3>對房客</h3><p>每一項訴求都有追蹤，每一次服務都有標準。您的租屋處是永遠安心的家。</p></div>
-  </div>
+
+ 
   <div class="callout">盈寓的承諾：讓租賃回歸本質，以系統化管理取代個人經驗的落差。</div>
  </div>
 
@@ -425,13 +470,13 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
     <li>輸入電話號碼 0978939153，加入好友</li>
     <li>傳送房屋區域與基本資料，專人與您聯繫</li>
    </ol>
-   <p style="color:var(--muted);font-size:.95rem">也歡迎直接<a href="tel:0978939153" style="color:var(--pine);font-weight:700">撥打電話</a>洽詢</p>
+   <p style="color:var(--muted);font-size:1.15rem">也歡迎直接<a href="tel:0978939153" style="color:var(--pine);font-weight:700">撥打電話</a>洽詢</p>
   </div>
  </div>
 </div></section>
 </main>
 
-<footer>© 2026 盈寓 INYU　讓好房有收益，讓居住有品質。｜0978-939153｜contact@inyu.com.tw</footer>
+<footer>© 2026 盈寓 INYU　讓好房有收益，讓居住有品質。｜0978-939153｜max131419@gmail.com</footer>
 
 <script>
 const btns=document.querySelectorAll('#nav button'),pages=document.querySelectorAll('.page');
