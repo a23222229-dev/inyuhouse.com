@@ -97,9 +97,36 @@ button.linebtn{border:0;font:inherit;font-weight:700;font-size:1.15rem;cursor:po
 .lsteps{counter-reset:s;list-style:none;text-align:left;max-width:320px;margin:0 auto 20px}
 .lsteps li{counter-increment:s;position:relative;padding:6px 0 6px 38px;color:var(--ink)}
 .lsteps li::before{content:counter(s);position:absolute;left:0;top:7px;width:26px;height:26px;border-radius:50%;background:var(--pine);color:#fff;font-size:.85rem;display:grid;place-items:center}
+.sol-img{width:100%;display:block;border-radius:14px;margin-top:22px}
+.cards6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.cards6>div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:8px;padding:18px}
+.cards6 p,.dsteps p,.worry p{color:var(--muted);font-size:.94rem}
+.callout{background:var(--pine-d);color:#fff;border-radius:12px;padding:16px 22px;margin-top:20px;font-weight:600;text-align:center}
+.worry{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+.worry .box{padding:20px}
+.worry ul{list-style:none}.worry li{padding:6px 0;border-bottom:1px dashed var(--line);color:var(--ink)}.worry li:last-child{border:0}
+.worry .a{border-top:4px solid var(--pine)}.worry .b{border-top:4px solid #d9a94a}
+.dsteps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:22px}
+.dsteps>div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;text-align:center}
+.dsteps b{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 6px;border-radius:10px;background:var(--pine);color:#fff;font-size:1.3rem}
+.dsteps h3{margin-bottom:4px}
+.trust{background:var(--sand);border-left:6px solid var(--pine);border-radius:10px;padding:22px 26px}
+.trust h2{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;list-style:none}
+.chips li{background:var(--pine);color:#fff;padding:6px 14px;border-radius:20px;font-size:.95rem}
+.chips li.g{background:#c9a24a;color:#1d2a24}
+.pr{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:14px}
+.pr td{padding:11px 14px;border-bottom:1px solid var(--line)}
+.pr tr:last-child td{border:0}
+.pr td:first-child{width:96px;font-weight:700;color:#fff;text-align:center;white-space:nowrap}
+.pr td:last-child{width:34%;color:var(--pine-d);font-weight:600}
+.p1 td:first-child{background:#e8501f}.p2 td:first-child{background:#0b4a33}.p3 td:first-child{background:#4a9a62}.p4 td:first-child{background:#8fcf9d;color:#0b4a33}
+.formula{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:16px;text-align:center;font-weight:700;color:var(--pine-d);font-size:1.05rem}
 footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20px;font-size:.9rem}
 @media(max-width:800px){
- .hero,.two,.three,.four,.steps,.blk,.cgrid,.pair{grid-template-columns:1fr}
+ .cards6,.worry{grid-template-columns:1fr}
+ .dsteps{grid-template-columns:1fr 1fr}
+ .worry,.hero,.two,.three,.four,.steps,.blk,.cgrid,.pair{grid-template-columns:1fr}
  .steps,.four{grid-template-columns:1fr 1fr}
  .blk.rev>:first-child{order:0}
  header .wrap{height:auto;flex-direction:column;padding:10px 20px;gap:6px}
@@ -113,7 +140,7 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
 <header><div class="wrap">
  <a class="logo" href="#home" data-go="home"><img src="./img/logo.png" alt="盈寓標誌">盈寓 <small>INYU</small></a>
  <nav id="nav" aria-label="主選單">
-  <button data-p="home" class="on">首頁</button><button data-p="about">關於我們</button><button data-p="service">服務項目</button><button data-p="contact">聯絡我們</button>
+  <button data-p="home" class="on">首頁</button><button data-p="about">關於我們</button><button data-p="solution">解決方案</button><button data-p="service">服務項目</button><button data-p="contact">聯絡我們</button>
  </nav>
 </div></header>
 
@@ -209,6 +236,92 @@ footer{background:var(--pine-d);color:#c3dccb;text-align:center;padding:28px 20p
  </div>
 
  <div class="cta"><h2>想知道您的房子有多少潛力？</h2><p>歡迎預約免費資產健檢，由專人為您說明。</p><button class="btn" data-go="contact">預約健檢</button></div>
+</div></section>
+
+<!-- 解決方案 -->
+<section class="page" id="solution"><div class="wrap">
+ <h1>盈寓租賃管理方案：<br>從看見問題到完美居住</h1>
+ <p class="lead">為房東守護資產收益，為房客打造安心生活。</p>
+ <img class="sol-img" src="./img/解決方案1.webp" alt="盈寓租賃管理方案：連結房東與房客的橋樑">
+
+ <div class="sec" id="sol-problem">
+  <h2>租賃現場的真正危機，是「問題沒有被定義」</h2>
+  <img class="sol-img" src="./img/解決方案2.webp" alt="房東與房客各自的擔憂，經由盈寓系統轉化為可處理的事件">
+  <div class="worry">
+   <div class="box a"><h3>房東擔憂資產折損與金流中斷</h3>
+    <ul><li>為什麼房子一直空置？</li><li>修繕到底誰付錢？</li><li>房客不繳租怎麼辦？</li></ul></div>
+   <div class="box b"><h3>房客擔憂居住品質與權益受損</h3>
+    <ul><li>冷氣壞了沒人修！</li><li>押金會不會被亂扣？</li><li>房東臨時漲價？</li></ul></div>
+  </div>
+  <div class="callout">問題不等於失敗。模糊不清、缺乏證據與沒有期限的抱怨，才是爭議的根源。盈寓將情緒轉化為可處理的系統事件。</div>
+ </div>
+
+ <div class="sec" id="sol-map">
+  <h2>盈寓 6 大事務地圖：全方位覆蓋租賃生命週期</h2>
+  <img class="sol-img" src="./img/解決方案3.webp" alt="盈寓系統六大事務地圖">
+  <div class="cards6">
+   <div><h3>接案業務</h3><p>承諾管理與範圍界定。</p></div>
+   <div><h3>租賃事務</h3><p>市場判讀、租約設計與流程控管。</p></div>
+   <div><h3>房管庶務</h3><p>報修查驗、派工、驗收與憑證閉環。</p></div>
+   <div><h3>金流帳務</h3><p>租押金流、對帳授權與異常追蹤。</p></div>
+   <div><h3>執行法務</h3><p>責任界線、文件完整性與證據意識。</p></div>
+   <div><h3>所得稅務</h3><p>費用分類、單據留存與稅務交付。</p></div>
+  </div>
+  <div class="callout">一個完整的閉環系統：任何突發狀況，都能在系統中找到對應的處理機制與主責劃分。</div>
+ </div>
+
+ <div class="sec" id="sol-datacr">
+  <h2>拒絕憑感覺做事：盈寓的 D-A-T-A-C-R 標準流程</h2>
+  <img class="sol-img" src="./img/解決方案4.webp" alt="D-A-T-A-C-R 六步驟標準流程：定義、評估、追溯、行動、確認、復盤">
+  <div class="dsteps">
+   <div><b>D</b><h3>定義</h3><p>一句話釐清人、事、時、地、物與影響。</p></div>
+   <div><b>A</b><h3>評估</h3><p>判斷安全、法律、金流與客訴風險級別。</p></div>
+   <div><b>T</b><h3>追溯</h3><p>尋找契約、照片與點交紀錄作為客觀證據。</p></div>
+   <div><b>A</b><h3>行動</h3><p>執行報價、派工、催繳等具體動作。</p></div>
+   <div><b>C</b><h3>確認</h3><p>與房東／房客確認方案、費用與期限。</p></div>
+   <div><b>R</b><h3>復盤</h3><p>結案並更新 SOP，避免問題重複發生。</p></div>
+  </div>
+ </div>
+
+ <div class="sec" id="sol-landlord">
+  <h2>房東視角：從「最高刊登價」到「最高有效收益」</h2>
+  <img class="sol-img" src="./img/解決方案5.webp" alt="房東視角：營運淨收益管理、精準定價與招租漏斗、資產保護">
+  <div class="formula">有效收益 ＝ 名目租金 － 空置損失 － 折讓／日常營運支出</div>
+  <div class="cards6" style="grid-template-columns:repeat(3,1fr)">
+   <div><h3>營運淨收益管理</h3><p>不只看刊登價，而是看扣除空置與營運支出後，真正落袋的有效收益。</p></div>
+   <div><h3>精準定價與招租漏斗</h3><p>曝光、詢問、帶看、成交。透過漏斗數據抓出卡關點，避免招租期過長造成的隱形空置成本。</p></div>
+   <div><h3>資產保護</h3><p>從設備履歷到退租點交，以「可追溯的照片與文件」取代「口頭印象」，全面保全房屋資產價值。</p></div>
+  </div>
+ </div>
+
+ <div class="sec" id="sol-tenant">
+  <h2>房客視角：把「叫師傅來」變成標準化服務體驗</h2>
+  <img class="sol-img" src="./img/解決方案6.webp" alt="房客視角：透明的修繕權責與處理承諾分級表">
+  <h3 style="margin-top:20px">透明的修繕權責</h3>
+  <ul class="chips"><li>報修</li><li class="g">判斷（耗材／人為／老化）</li><li>估價</li><li>授權</li><li class="g">施工</li><li>驗收</li></ul>
+  <h3 style="margin-top:18px">盈寓處理承諾分級表</h3>
+  <table class="pr"><tbody>
+   <tr class="p1"><td>P1 緊急</td><td>漏水擴大、人身安全受威脅</td><td>承諾：立即通報止損</td></tr>
+   <tr class="p2"><td>P2 高</td><td>明顯影響居住（如盛夏冷氣不冷）</td><td>承諾：當日安排處理</td></tr>
+   <tr class="p3"><td>P3 中</td><td>局部功能異常</td><td>承諾：排程處理</td></tr>
+   <tr class="p4"><td>P4 低</td><td>美觀改善、非必要升級</td><td>承諾：納入週期維護</td></tr>
+  </tbody></table>
+ </div>
+
+ <div class="sec trust" id="sol-trust"><h2>第三方租押金信託</h2></div>
+
+ <div class="sec" id="sol-ledger" style="margin-top:56px">
+  <h2>盈寓台帳系統：從「四處救火」到「安居樂業」</h2>
+  <img class="sol-img" src="./img/解決方案7.webp" alt="盈寓台帳系統：數據留痕、權責清晰、居住升級">
+  <ul class="chips"><li>數據留痕</li><li>權責清晰</li><li>居住升級</li></ul>
+  <div class="worry">
+   <div class="box a"><h3>對房東</h3><p>每一分錢都有憑證，每一次修繕都有履歷。您的房屋是優質的頂級租賃產品。</p></div>
+   <div class="box b"><h3>對房客</h3><p>每一項訴求都有追蹤，每一次服務都有標準。您的租屋處是永遠安心的家。</p></div>
+  </div>
+  <div class="callout">盈寓的承諾：讓租賃回歸本質，以系統化管理取代個人經驗的落差。</div>
+ </div>
+
+ <div class="cta"><h2>想了解盈寓如何處理您的租賃問題？</h2><p>預約免費資產健檢，由專人為您說明。</p><button class="btn" data-go="contact">預約健檢</button></div>
 </div></section>
 
 <!-- 服務項目 -->
